@@ -2735,6 +2735,28 @@ static bool TokenizeCStylePunctuation(const char * in_begin, const char * in_end
 	return false;
 }
 
+const TextEditor::LanguageDefinition& TextEditor::LanguageDefinition::Text()
+{
+	static bool inited = false;
+	static LanguageDefinition langDef;
+	
+	if (!inited)
+	{
+		langDef.mCommentStart = '\0';
+		langDef.mCommentEnd = '\0';
+		langDef.mSingleLineComment = '\0';
+
+		langDef.mCaseSensitive = false;
+		langDef.mAutoIndentation = true;
+
+		langDef.mName = "Text";
+
+		inited = true;
+	}
+
+	return langDef;
+}
+
 const TextEditor::LanguageDefinition& TextEditor::LanguageDefinition::CPlusPlus()
 {
 	static bool inited = false;

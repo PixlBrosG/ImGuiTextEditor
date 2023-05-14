@@ -8,7 +8,7 @@
 #include <unordered_map>
 #include <map>
 #include <regex>
-#include "imgui.h"
+#include <imgui.h>
 
 class TextEditor
 {
@@ -173,6 +173,7 @@ public:
 		{
 		}
 
+		static const LanguageDefinition& Text();
 		static const LanguageDefinition& CPlusPlus();
 		static const LanguageDefinition& HLSL();
 		static const LanguageDefinition& GLSL();
