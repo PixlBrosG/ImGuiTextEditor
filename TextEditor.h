@@ -175,12 +175,10 @@ public:
 
 		static const LanguageDefinition& Text();
 		static const LanguageDefinition& CPlusPlus();
+		static const LanguageDefinition& CSharp();
 		static const LanguageDefinition& HLSL();
 		static const LanguageDefinition& GLSL();
 		static const LanguageDefinition& C();
-		static const LanguageDefinition& SQL();
-		static const LanguageDefinition& AngelScript();
-		static const LanguageDefinition& Lua();
 	};
 
 	TextEditor();
